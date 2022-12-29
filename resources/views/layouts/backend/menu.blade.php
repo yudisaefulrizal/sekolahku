@@ -143,6 +143,20 @@
                 </ul>
             </li>
 
+            {{-- pengembangan --}}
+            <li class=" nav-item">
+                <a class="d-flex align-items-center" href="#"><i data-feather="users"></i>
+                    <span class="menu-title text-truncate" data-i18n="Card">fitur</span>
+                </a>
+                <ul class="menu-content">
+                    <li class="nav-item {{ (request()->is('backend-pengguna-pengajar')) ? 'active' : '' }}">
+                        <a class="d-flex align-items-center" href="#"><i data-feather="circle"></i>
+                            <span class="menu-item text-truncate" data-i18n="Basic">Absen</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
             {{-- MENU GURU --}}
             @elseif(Auth::user()->role == 'Guru')
             <li class=" nav-item">
